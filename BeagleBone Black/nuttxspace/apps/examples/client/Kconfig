@@ -1,0 +1,24 @@
+config EXAMPLES_CLIENT
+	tristate "Client Application"
+	default n
+	---help---
+		Enable the custom client network application.
+
+if EXAMPLES_CLIENT
+
+config EXAMPLES_CLIENT_PROGNAME
+	string "Program name"
+	default "client"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_CLIENT_PRIORITY
+	int "Client task priority"
+	default 100
+
+config EXAMPLES_CLIENT_STACKSIZE
+	int "Client stack size"
+	default 2048
+
+endif

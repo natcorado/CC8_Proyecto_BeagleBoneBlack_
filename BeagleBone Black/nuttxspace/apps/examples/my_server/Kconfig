@@ -1,0 +1,24 @@
+config EXAMPLES_MY_SERVER
+	tristate "My Server Application"
+	default n
+	---help---
+		Enable the custom server network application.
+
+if EXAMPLES_MY_SERVER
+
+config EXAMPLES_MY_SERVER_PROGNAME
+	string "Program name"
+	default "my_server"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_MY_SERVER_PRIORITY
+	int "Server task priority"
+	default 100
+
+config EXAMPLES_MY_SERVER_STACKSIZE
+	int "Server stack size"
+	default 2048
+
+endif

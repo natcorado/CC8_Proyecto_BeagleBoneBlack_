@@ -1,0 +1,3 @@
+ifneq ($(CONFIG_EXAMPLES_MY_SERVER),)
+CONFIGURED_APPS += $(APPDIR)/examples/my_server
+endif

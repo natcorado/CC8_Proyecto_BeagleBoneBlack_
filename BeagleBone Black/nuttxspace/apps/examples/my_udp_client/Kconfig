@@ -1,0 +1,24 @@
+config EXAMPLES_MY_UDP_CLIENT
+	tristate "My UDP Client Application"
+	default n
+	---help---
+		Enable the custom UDP client network application.
+
+if EXAMPLES_MY_UDP_CLIENT
+
+config EXAMPLES_MY_UDP_CLIENT_PROGNAME
+	string "Program name"
+	default "my_udp_client"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_MY_UDP_CLIENT_PRIORITY
+	int "Client task priority"
+	default 100
+
+config EXAMPLES_MY_UDP_CLIENT_STACKSIZE
+	int "Client stack size"
+	default 4096
+
+endif
